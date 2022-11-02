@@ -1,5 +1,6 @@
 let response;
- 
+const { exec } = require('node:child_process');
+
 exports.handler = async (event, context) => {
   try {
     exec("ls -al", (err, stdout, stderr) => {
